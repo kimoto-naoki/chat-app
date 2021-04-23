@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'messages/index'
   root to: "rooms#index"
   resources :users, onry: [:edit, :update]
-  resources :rooms, onry: [:new, :create,] do
+  resources :rooms, onry: [:new, :create, :destroy] do
     resources :messages, onry: [:index, :create]
   end
 end
