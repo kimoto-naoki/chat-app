@@ -1,9 +1,9 @@
 Rails.application.routes.draw do  
   devise_for :users
   get 'messages/index'
-  root to: "messages#index"
+  root to: "rooms#index"
   resources :users, onry: [:edit, :update]
-  resources :rooms, onry: [:new, :create]
+  resources :rooms, onry: [:new, :create,]
 end
 
 
